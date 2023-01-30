@@ -17,35 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Nh-0O0">
-                                <rect key="frame" x="95" y="513" width="130" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Nh-0O0">
+                                <rect key="frame" x="95" y="513.5" width="130" height="34.5"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                 <connections>
                                     <action selector="lightButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKN-pb-cRS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-17-Ko1" userLabel="Green">
-                                <rect key="frame" x="110" y="325" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.21412655558522631" green="0.63195787323398034" blue="0.03903026222158433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-Uz-dxo" userLabel="Red">
-                                <rect key="frame" x="110" y="55" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80987197160000002" green="0.016653352270000001" blue="0.032093975130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oas-ya-8IL" userLabel="Yellow">
-                                <rect key="frame" x="110" y="186" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="H1w-fd-NFe">
+                                <rect key="frame" x="110" y="55" width="100" height="370"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-Uz-dxo" userLabel="Red">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.80987197160000002" green="0.016653352270000001" blue="0.032093975130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oas-ya-8IL" userLabel="Yellow">
+                                        <rect key="frame" x="0.0" y="135" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-17-Ko1" userLabel="Green">
+                                        <rect key="frame" x="0.0" y="270" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.21412655558522631" green="0.63195787323398034" blue="0.03903026222158433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dy4-Nh-0O0" secondAttribute="bottom" constant="20" id="Jkv-3G-8h8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H1w-fd-NFe" secondAttribute="trailing" constant="110" id="SDV-Ec-fxd"/>
+                            <constraint firstItem="dy4-Nh-0O0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="aHh-DR-KA8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dy4-Nh-0O0" secondAttribute="trailing" constant="95" id="k8Y-jh-xDf"/>
+                            <constraint firstItem="H1w-fd-NFe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="v5g-SA-1c8"/>
+                            <constraint firstItem="H1w-fd-NFe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="ycu-47-alD"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLightView" destination="MyE-17-Ko1" id="Yyy-VJ-0qO"/>
